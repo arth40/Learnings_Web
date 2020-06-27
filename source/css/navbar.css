@@ -1,0 +1,89 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    background-color: #fbd082;
+    width: 100%;
+}
+
+.navbar{
+	overflow: hidden;
+	width: 100%;
+  height: 5vw;
+	z-index:15;
+	position: fixed;
+	top: 0;
+	padding-right: 20px;
+	background:rgba(0, 0, 0,0.8);
+	box-shadow: 0 0 0.5vw black;
+	transition: margin-left 0.5s,width 0.5s;
+	transform: translateY(0);
+}
+
+#sideicon{
+	margin-left: 3vw;
+	margin-top: 1vw;
+	color:white;
+	font-size: 3vw;
+	float: left;
+	cursor: pointer;
+}
+#sideicon:hover{
+	color: grey;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 15;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0,0.8);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 6vw;
+  font-family: 'Bebas Neue';
+  box-shadow: 0 0 0.5vw black;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  color: white;
+  top: 0;
+  right: 2vw;
+  font-size: 4vw;
+  margin-left: 50px;
+}
+
+.sidenav a {
+  padding: 1vw 1vw 1vw 3vw;
+  margin-top:1vw;
+  margin-bottom: 1vw;
+  text-decoration: none;
+  font-size: 2.5vw;
+  color: #FFB53C;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover:not(.closebtn) {
+  color: #FFB53C;
+  background: linear-gradient(to right,#FFB53C,#FFB53C);
+  background-repeat: no-repeat;
+  background-size: 5% 95%;
+  background-position: 0 0;
+}
+.sidenav .closebtn:hover {
+  color: white;
+}
+
+#sidenavid .active{
+  color: black;
+  background: linear-gradient(to right, #FFB53C ,#FFB53C);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: 0 0;
+}
+
+
+

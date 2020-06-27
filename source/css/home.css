@@ -1,0 +1,40 @@
+.page{
+    width:70%;
+    margin-top: 8vw;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: yellow;
+    height: 90vw;
+}
+
+.announcements{
+    height:30vw;
+    position: relative;
+    background-color: lightseagreen;
+}
+
+.announcements h3{
+    text-align: center;
+    font-size: 2vw;
+    margin: 0;
+    padding: 0;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
+
+.announcements h4{
+    text-align: center;
+    border: 0.5vw solid black;
+    font-size: 1.5vw;
+    margin: 0;
+    padding: 0;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+    width: 20vw;
+    position: absolute;
+    bottom: 10%;
+    left: 25vw;
+}
+.announcements h4:hover{
+    background-color: white;
+}
