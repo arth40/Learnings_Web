@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>
+            Make Announcement
+        </title>
+    </head>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+    <body>
+        <h3>Make An Announcement</h3>
+        <form action="../php/makeann.php" method="POST">
+            <h4>Your Name: </h4><input type="text" id="facname" name="facname"><br>
+            <h4>Announcement: </h4><textarea name="ann" rows="10" cols="40"></textarea><br>
+            <h4>Event/Expiry Date: </h4><input type="date" id="expdate" name="expdate"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>

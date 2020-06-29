@@ -8,7 +8,7 @@
 }
 
 .announcements{
-    height:30vw;
+    height:35vw;
     position: relative;
     background-color: lightseagreen;
 }
@@ -22,7 +22,7 @@
     padding-bottom: 1vw;
 }
 
-.announcements h4{
+.makeann h4{
     text-align: center;
     border: 0.5vw solid black;
     font-size: 1.5vw;
@@ -37,4 +37,27 @@
 }
 .announcements h4:hover{
     background-color: white;
+}
+
+.makeann{
+    z-index: 2;
+}
+
+.fetchann{
+    width:90%;
+    background-color: green;
+    height: 22vw;
+    margin-left: 5%;
+    margin-right: 5%;
+    overflow: hidden;
+}
+
+.fetchann h4{
+    padding: 0;
+    margin: 0;
+    font-size: 1.5vw;
+}
+
+.fetchann h4:hover{
+    background-color: green;
 }

@@ -12,6 +12,36 @@
     <script type="text/javascript" src="../js/sidenav.js"></script>
     <script type="text/javascript" src="../js/navhide.js"></script>
     <script type="text/javascript" src="../js/makeann.js"></script>
+    
+    <?php
+    function disann(){
+$connection = mysqli_connect('localhost', 'root', 'arth123');
+if (!$connection) {
+    die("Database Connection Failed" . mysqli_error($connection));
+}
+$select_db = mysqli_select_db($connection, 'learnings');
+if (!$select_db) {
+    die("Database Selection Failed" . mysqli_error($connection));
+}
+date_default_timezone_set('Asia/Kolkata');
+$query = "SELECT * FROM announcements";
+$result = mysqli_query($connection, $query) or die(mysqli_error($connection));
+$count = mysqli_num_rows($result);
+#echo $count;
+$res = array();
+for($i=0;$i<$count;$i++)
+{
+    $row = $result->fetch_assoc();
+    //echo ''.$row['faculty_name'].' '.$row['datepost'].'<br>'.$row['ann_details'].'<br>';
+    
+    $res[$i] =''.$row['faculty_name'].' '.$row['deadline'].'<br> '.$row['ann_details'].'<br>';
+}
+for($i=0;$i<$count;$i++)
+{
+    echo '<h4>'.$res[$i].'</h4>';
+}
+    }
+?>
 </head>
 
 <body>
@@ -20,7 +50,7 @@
         <a href="#" class="active">Home</a>
         <a href="livelectures.html">Live Lecture</a>
         <a href="quizsetup.html">Setup Quiz</a>
-        <a href="quizsetup.html">Setup Assignment</a>
+        <a href="assignmentsetup.html">Setup Assignment</a>
         <a href="timetable.html">Time Table</a>
         <a href="studentconnect.html">Student Connect</a>
     </div>
@@ -30,8 +60,11 @@
     <div class="page">
         <div class="announcements">
             <h3>Announcements</h3>
-            <div class="fetchann"></div>
-            <div class="makeann" onclick="makeannouncement()"><h4>Make an Announcement</h4></div>
+            <div class="fetchann">
+                <h5><?php disann(); ?>
+                </h5>
+            </div>
+            <div class="makeann"><a href="makeannouncement.html"><h4>Make an Announcement</h4></a></div>
         </div>
     </div>
 </body>

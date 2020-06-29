@@ -1,5 +1,5 @@
 <?php
-$connection = mysqli_connect('localhost', 'root', '12345');
+$connection = mysqli_connect('localhost', 'root', 'arth123');
 if (!$connection){
     die("Database Connection Failed" . mysqli_error($connection));
 }
@@ -23,8 +23,9 @@ $count = mysqli_num_rows($result);
 if ($count == 1){
 header('Location: ../pages/homestud.html');
 }else{
-echo "<script type='text/javascript'>alert('Invalid Login Credentials')</script>";
-//echo "Invalid Login Credentials";
+
+echo "<script type='text/javascript'>alert('Invalid Login Credentials');</script>";
+echo "Invalid Login Credentials";
 }
 
 }
